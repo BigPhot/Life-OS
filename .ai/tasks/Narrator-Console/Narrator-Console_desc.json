@@ -1,0 +1,90 @@
+{
+  "task_id": "UI_001",
+  "task_type": "Coding",
+  "sub_type": "User Interface",
+  "purpose": "To visualize my goals and journey to greatness through eras and tasks",
+  "description": "The new approach replaces broad time buckets with eras — distinct life periods characterized by routines, mindset, or overarching themes. Each era gets its own page with a standardized layout but flexible content. Eras are tagged past, current, or future. The current day will act as a console, not just a dashboard.",
+  "technical_stack": {
+    "framework": "Electron + React + TypeScript",
+    "styling": "Tailwind CSS (framework for now, custom CSS later)",
+    "state_management": "Redux Toolkit",
+    "data_source": {
+      "current": "Google Sheets API",
+      "future": "SQLite local database"
+    },
+    "3d_graphics": "Three.js with react-three-fiber",
+    "2d_graphs": "D3.js",
+    "deployment": "Private desktop application",
+    "build_tools": "Vite + Electron Forge"
+  },
+  "pages": {
+    "era_page": {
+      "sections": [
+        "Narrative chapter of the era",
+        "Social mental map of self (characteristics + worldview)",
+        "Notable Characters, Events, Media/Activities",
+        "Work-Play Ratio",
+        "Happy-Sad Ratio",
+        "Motive Ratio",
+        "Distribution of work across 6 avenues of growth",
+        "Daily Routine",
+        "Task/Goal Graph",
+        "Knowledge Graph"
+      ],
+      "interactivity": ["expand_collapse_sections", "tooltips_for_metrics"],
+      "data": ["era_metadata", "AI_suggestions"]
+    },
+    "current_day_console": {
+      "sections": [
+        "AI-generated daily calendar of tasks",
+        "List of upcoming tasks linking to growth avenue pages"
+      ],
+      "interactivity": ["mark_tasks_complete", "reorder_tasks", "jump_to_relevant_pages"],
+      "data": ["task_scheduler_AI"]
+    },
+    "task_goal_graph": {
+      "features": [
+        "3D directed graph of tasks/goals from birth to ultimate goals",
+        "Childhood nodes = activities",
+        "Post-accident nodes = tasks"
+      ],
+      "interactivity": ["hover_for_details", "click_to_navigate"],
+      "libraries": ["Three.js", "react-three-fiber"]
+    },
+    "knowledge_graph": {
+      "nodes": ["People", "Places", "Things"],
+      "links": ["Task/Goal graph nodes"],
+      "interactivity": ["filter_by_type", "expand_collapse_nodes"],
+      "data": ["knowledge_graph_database"],
+      "libraries": ["D3.js"]
+    }
+  },
+  "page_interaction": {
+    "navigation_flow": [
+      "User starts on Current Day Console",
+      "Can navigate to any Era Page for context",
+      "Can jump to Task/Goal Graph or Knowledge Graph from either console or era page"
+    ],
+    "data_flow": [
+      "AI scheduler feeds tasks into Current Day Console",
+      "Task/Goal Graph pulls from task database and links to eras",
+      "Knowledge Graph links nodes to tasks, events, or characters across eras",
+      "Metrics update dynamically based on tasks completed"
+    ],
+    "shared_components": {
+      "header": "Shows current era, day, navigation links",
+      "elements": "Components holding the sections",
+      "modals_popups": "Detailed task info or character profiles"
+    },
+    "interactions_across_pages": [
+      "Clicking a task in Current Day Console → navigates to relevant era page or task detail",
+      "Expanding a character in Current Era → highlights them in Knowledge Graph",
+      "Adjusting daily tasks → updates task/goal graph metrics dynamically"
+    ],
+    "user_feedback_state_persistence": [
+      "Completed tasks, graph expansions, and interactions persist in the database",
+      "AI suggestions update in real time but maintain history for reflection"
+    ]
+  },
+  "version": 2
+}

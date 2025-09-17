@@ -1,0 +1,311 @@
+{
+  "step_id": "SETUP",
+  "expanded_sub_steps": [
+    {
+      "id": "SETUP_001",
+      "title": "Initialize Node.js project and install Electron Forge",
+      "description": "Create package.json with project metadata and install Electron Forge as the build system foundation",
+      "file_actions": [
+        "create: package.json",
+        "create: .gitignore"
+      ],
+      "key_decisions": [
+        "Use Electron Forge with Vite template",
+        "Set Node.js version requirement to 18+"
+      ],
+      "estimated_lines": 45,
+      "validation": "package.json exists with correct metadata and Electron Forge installed successfully",
+      "start_time_iso": "2025-09-17 11:06:24",
+      "status": "completed",
+      "end_time_iso": "2025-09-17 11:08:01",
+      "actual_duration_seconds": 97,
+      "actual_duration_minutes": 1.63
+    },
+    {
+      "id": "SETUP_002",
+      "title": "Configure Electron Forge with Vite template",
+      "description": "Initialize Electron Forge project structure with Vite bundler for modern build pipeline",
+      "file_actions": [
+        "create: forge.config.js",
+        "create: src/main.ts",
+        "create: src/preload.ts",
+        "modify: package.json"
+      ],
+      "key_decisions": [
+        "Use TypeScript for main process",
+        "Enable context isolation for security"
+      ],
+      "estimated_lines": 80,
+      "validation": "Electron app starts with blank window and no console errors",
+      "start_time_iso": "2025-09-17 11:09:47",
+      "status": "completed",
+      "end_time_iso": "2025-09-17 11:11:10",
+      "actual_duration_seconds": 83,
+      "actual_duration_minutes": 1.38
+    },
+    {
+      "id": "SETUP_003",
+      "title": "Install and configure React with TypeScript",
+      "description": "Add React dependencies and create initial component structure with proper TypeScript configuration",
+      "file_actions": [
+        "create: src/renderer.tsx",
+        "create: src/App.tsx",
+        "create: src/index.html",
+        "create: tsconfig.json",
+        "modify: package.json"
+      ],
+      "key_decisions": [
+        "Use React 18 with concurrent features",
+        "Strict TypeScript configuration"
+      ],
+      "estimated_lines": 65,
+      "validation": "React app renders 'Hello World' component in Electron window",
+      "start_time_iso": "2025-09-17 12:36:10",
+      "status": "completed",
+      "end_time_iso": "2025-09-17 12:37:21",
+      "actual_duration_seconds": 71,
+      "actual_duration_minutes": 1.19
+    },
+    {
+      "id": "SETUP_004",
+      "title": "Configure Vite for Electron renderer process",
+      "description": "Set up Vite configuration for optimal development experience with hot reload and TypeScript support",
+      "file_actions": [
+        "create: vite.renderer.config.ts",
+        "create: vite.main.config.ts",
+        "create: vite.preload.config.ts"
+      ],
+      "key_decisions": [
+        "Enable HMR for renderer",
+        "Configure proper build targets for Electron"
+      ],
+      "estimated_lines": 90,
+      "validation": "npm run dev starts app with hot reload working for renderer changes"
+    },
+    {
+      "id": "SETUP_005",
+      "title": "Install and configure Tailwind CSS",
+      "description": "Add Tailwind CSS with proper PostCSS configuration and create base stylesheet",
+      "file_actions": [
+        "create: tailwind.config.js",
+        "create: postcss.config.js",
+        "create: src/styles/globals.css",
+        "modify: package.json",
+        "modify: src/App.tsx"
+      ],
+      "key_decisions": [
+        "Use JIT mode for smaller bundle",
+        "Include all Tailwind layers"
+      ],
+      "estimated_lines": 55,
+      "validation": "Tailwind classes work in React components with proper styling"
+    },
+    {
+      "id": "SETUP_006",
+      "title": "Install Redux Toolkit and React-Redux",
+      "description": "Add state management dependencies and create store configuration with proper TypeScript typing",
+      "file_actions": [
+        "create: src/store/index.ts",
+        "create: src/store/types.ts",
+        "modify: package.json"
+      ],
+      "key_decisions": [
+        "Use RTK Query for API calls",
+        "Enable Redux DevTools in development"
+      ],
+      "estimated_lines": 40,
+      "validation": "Store is created and Redux DevTools extension connects successfully"
+    },
+    {
+      "id": "SETUP_007",
+      "title": "Configure Redux Provider and initial slice",
+      "description": "Wrap App with Redux Provider and create a basic app slice for global state management",
+      "file_actions": [
+        "create: src/store/slices/appSlice.ts",
+        "modify: src/renderer.tsx",
+        "modify: src/store/index.ts"
+      ],
+      "key_decisions": [
+        "Create app slice for UI state",
+        "Use createSlice for reducer logic"
+      ],
+      "estimated_lines": 50,
+      "validation": "Redux store is connected and app slice dispatches actions correctly"
+    },
+    {
+      "id": "SETUP_008",
+      "title": "Implement IPC communication setup",
+      "description": "Configure secure IPC between main and renderer processes with proper type safety",
+      "file_actions": [
+        "create: src/types/ipc.ts",
+        "modify: src/main.ts",
+        "modify: src/preload.ts",
+        "create: src/utils/ipc.ts"
+      ],
+      "key_decisions": [
+        "Use contextBridge for secure IPC",
+        "Create typed IPC channels"
+      ],
+      "estimated_lines": 70,
+      "validation": "Renderer can send/receive messages to main process via exposed API"
+    },
+    {
+      "id": "SETUP_009",
+      "title": "Create project folder structure",
+      "description": "Establish organized directory structure for components, pages, services, and utilities",
+      "file_actions": [
+        "create: src/components/index.ts",
+        "create: src/pages/index.ts",
+        "create: src/services/index.ts",
+        "create: src/utils/index.ts",
+        "create: src/hooks/index.ts",
+        "create: src/types/index.ts"
+      ],
+      "key_decisions": [
+        "Use barrel exports for clean imports",
+        "Separate by feature and function"
+      ],
+      "estimated_lines": 30,
+      "validation": "All directories exist with proper index files for exports"
+    },
+    {
+      "id": "SETUP_010",
+      "title": "Install and configure React Router",
+      "description": "Add React Router for client-side navigation with proper TypeScript integration",
+      "file_actions": [
+        "create: src/router/index.tsx",
+        "create: src/router/routes.tsx",
+        "modify: src/App.tsx",
+        "modify: package.json"
+      ],
+      "key_decisions": [
+        "Use React Router v6",
+        "Implement route-based code splitting later"
+      ],
+      "estimated_lines": 60,
+      "validation": "Router renders different components for different paths"
+    },
+    {
+      "id": "SETUP_011",
+      "title": "Create initial page components",
+      "description": "Build basic page components (Console, Era, 3DGraph, KnowledgeGraph) with navigation",
+      "file_actions": [
+        "create: src/pages/Console.tsx",
+        "create: src/pages/Era.tsx",
+        "create: src/pages/Graph3D.tsx",
+        "create: src/pages/KnowledgeGraph.tsx",
+        "create: src/components/Navigation.tsx"
+      ],
+      "key_decisions": [
+        "Create minimal page layouts",
+        "Add navigation menu"
+      ],
+      "estimated_lines": 85,
+      "validation": "All pages render and navigation works between them"
+    },
+    {
+      "id": "SETUP_012",
+      "title": "Install and configure ESLint",
+      "description": "Set up ESLint with TypeScript and React rules for code quality enforcement",
+      "file_actions": [
+        "create: .eslintrc.json",
+        "create: .eslintignore",
+        "modify: package.json"
+      ],
+      "key_decisions": [
+        "Use @typescript-eslint recommended rules",
+        "Add React hooks rules"
+      ],
+      "estimated_lines": 40,
+      "validation": "ESLint runs without errors and catches common issues"
+    },
+    {
+      "id": "SETUP_013",
+      "title": "Install and configure Prettier",
+      "description": "Add Prettier for consistent code formatting with ESLint integration",
+      "file_actions": [
+        "create: .prettierrc.json",
+        "create: .prettierignore",
+        "modify: .eslintrc.json",
+        "modify: package.json"
+      ],
+      "key_decisions": [
+        "Use 2-space indentation",
+        "Integrate with ESLint via plugin"
+      ],
+      "estimated_lines": 25,
+      "validation": "Prettier formats code consistently and integrates with ESLint"
+    },
+    {
+      "id": "SETUP_014",
+      "title": "Configure development and production environments",
+      "description": "Set up environment-specific configurations and build scripts for different deployment scenarios",
+      "file_actions": [
+        "create: .env.development",
+        "create: .env.production",
+        "modify: forge.config.js",
+        "modify: package.json"
+      ],
+      "key_decisions": [
+        "Use environment variables for API keys",
+        "Separate dev and prod build configurations"
+      ],
+      "estimated_lines": 45,
+      "validation": "npm run make creates production build and npm run dev starts development server"
+    },
+    {
+      "id": "SETUP_015",
+      "title": "Create VS Code workspace configuration",
+      "description": "Set up VS Code settings for optimal development experience with extensions and debugging",
+      "file_actions": [
+        "create: .vscode/settings.json",
+        "create: .vscode/extensions.json",
+        "create: .vscode/launch.json"
+      ],
+      "key_decisions": [
+        "Enable format on save",
+        "Configure Electron debugging"
+      ],
+      "estimated_lines": 35,
+      "validation": "VS Code workspace loads with recommended extensions and debugging works"
+    },
+    {
+      "id": "SETUP_016",
+      "title": "Verify complete setup and create initial commit",
+      "description": "Run full development server, test all configurations, and create initial commit with working baseline",
+      "file_actions": [
+        "modify: README.md"
+      ],
+      "key_decisions": [
+        "Document setup instructions",
+        "Verify all systems working"
+      ],
+      "estimated_lines": 20,
+      "validation": "App builds, runs, and all linting/formatting tools work correctly"
+    }
+  ],
+  "total_tasks": 16,
+  "dependencies_resolved": [
+    "Node.js 18+ installed",
+    "Git repository initialized",
+    "VS Code or compatible editor available"
+  ],
+  "potential_blockers": [
+    "Node version compatibility issues with Electron",
+    "Permission issues with global npm packages",
+    "Port conflicts if 3000 is already in use",
+    "Windows-specific path issues in build scripts"
+  ],
+  "success_criteria": [
+    "Electron app launches successfully in development mode",
+    "Hot reload works for React components",
+    "TypeScript compiles without errors",
+    "ESLint and Prettier run without issues",
+    "Redux store is connected and functional",
+    "Navigation between pages works",
+    "Production build creates distributable package",
+    "All configuration files are properly set up",
+    "IPC communication works between main and renderer",
+    "Tailwind CSS styles are applied correctly"
+  ]
+}

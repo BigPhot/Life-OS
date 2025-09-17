@@ -1,0 +1,420 @@
+{
+  "task_id": "Narrator-Console",
+  "version": 3,
+  "breakdown_type": "hierarchical",
+  "description": "High-level steps with granular sub-steps to be expanded during implementation",
+  "technical_details": {
+    "framework": "Electron + React + TypeScript",
+    "styling": "Tailwind CSS (framework for now, custom CSS later)",
+    "state_management": "Redux Toolkit",
+    "data_source": {
+      "current": "Google Sheets API",
+      "future": "SQLite local database"
+    },
+    "3d_graphics": "Three.js with react-three-fiber",
+    "2d_graphs": "D3.js",
+    "deployment": "Private desktop application",
+    "build_tools": "Vite + Electron Forge"
+  },
+  "steps": [
+    {
+      "step_id": "SETUP",
+      "description": "Project initialization and configuration",
+      "status": "pending",
+      "dependencies": [],
+      "estimated_time_min": 60,
+      "sub_steps_to_expand": [
+        "Initialize Electron project structure",
+        "Set up React with TypeScript",
+        "Configure Vite build system",
+        "Install Tailwind CSS and configure",
+        "Set up Redux Toolkit store",
+        "Configure Electron main/renderer process communication",
+        "Create folder structure for components/pages/services",
+        "Set up React Router for navigation",
+        "Configure ESLint and Prettier",
+        "Create development vs production configs"
+      ]
+    },
+    {
+      "step_id": "DATA_LAYER",
+      "description": "Data models, types, and API integration",
+      "status": "pending",
+      "dependencies": ["SETUP"],
+      "estimated_time_min": 90,
+      "sub_steps_to_expand": [
+        "Define TypeScript interfaces for Era type",
+        "Define TypeScript interfaces for Task type",
+        "Define TypeScript interfaces for Goal type",
+        "Define TypeScript interfaces for Knowledge node types",
+        "Create Google Sheets API service class",
+        "Implement authentication for Google API",
+        "Create data fetching methods",
+        "Create data transformation utilities",
+        "Set up Redux slices for each data type",
+        "Create async thunks for API calls",
+        "Implement error handling and loading states",
+        "Create mock data for development"
+      ]
+    },
+    {
+      "step_id": "REVIEW_01",
+      "description": "Review setup and data layer implementation",
+      "status": "pending",
+      "dependencies": ["DATA_LAYER"],
+      "estimated_time_min": 10,
+      "review_items": [
+        "Project runs in development mode",
+        "TypeScript compiles without errors",
+        "Redux store properly configured",
+        "API calls working with mock data"
+      ]
+    },
+    {
+      "step_id": "SHARED_COMPONENTS",
+      "description": "Reusable UI components used across pages",
+      "status": "pending",
+      "dependencies": ["REVIEW_01"],
+      "estimated_time_min": 60,
+      "sub_steps_to_expand": [
+        "Create Layout wrapper component",
+        "Build Header navigation component",
+        "Create navigation menu items",
+        "Build Section container component",
+        "Implement expand/collapse logic",
+        "Create Card component for content blocks",
+        "Build Tooltip component",
+        "Create Loading spinner component",
+        "Build Error boundary component",
+        "Create Button component variants"
+      ]
+    },
+    {
+      "step_id": "CONSOLE_PAGE",
+      "description": "Current Day Console implementation",
+      "status": "pending",
+      "dependencies": ["SHARED_COMPONENTS"],
+      "estimated_time_min": 120,
+      "sub_steps_to_expand": [
+        "Create Console page container",
+        "Build daily calendar grid structure",
+        "Create time slot components",
+        "Implement task card component",
+        "Add drag-and-drop for tasks",
+        "Build upcoming tasks list",
+        "Create task item component",
+        "Add task completion checkbox",
+        "Implement task reordering",
+        "Add navigation links to tasks",
+        "Connect to Redux store",
+        "Implement real-time updates",
+        "Add keyboard shortcuts",
+        "Create quick add task form"
+      ]
+    },
+    {
+      "step_id": "REVIEW_02",
+      "description": "Review shared components and console page",
+      "status": "pending",
+      "dependencies": ["CONSOLE_PAGE"],
+      "estimated_time_min": 10,
+      "review_items": [
+        "All shared components render correctly",
+        "Console page displays mock data",
+        "Task interactions working",
+        "Navigation between sections works"
+      ]
+    },
+    {
+      "step_id": "ERA_PAGE_STRUCTURE",
+      "description": "Era page template and basic sections",
+      "status": "pending",
+      "dependencies": ["REVIEW_02"],
+      "estimated_time_min": 90,
+      "sub_steps_to_expand": [
+        "Create Era page container",
+        "Build era selector/switcher",
+        "Create narrative chapter component",
+        "Add rich text display",
+        "Build characters section",
+        "Create character card component",
+        "Build events timeline",
+        "Create media/activities grid",
+        "Implement era metadata display",
+        "Add past/current/future badges",
+        "Connect to Redux store"
+      ]
+    },
+    {
+      "step_id": "ERA_VISUALIZATIONS",
+      "description": "Charts and visual components for Era page",
+      "status": "pending",
+      "dependencies": ["ERA_PAGE_STRUCTURE"],
+      "estimated_time_min": 120,
+      "sub_steps_to_expand": [
+        "Create ratio meter component base",
+        "Build Work-Play ratio meter",
+        "Build Happy-Sad ratio meter",
+        "Build Motive ratio meter",
+        "Add animated transitions",
+        "Create growth avenues chart",
+        "Build radar/spider chart",
+        "Add interactive tooltips",
+        "Create daily routine timeline",
+        "Build routine block components",
+        "Add time distribution visualization",
+        "Implement social mental map",
+        "Create mind map nodes",
+        "Add connections between concepts"
+      ]
+    },
+    {
+      "step_id": "REVIEW_03",
+      "description": "Review Era page implementation",
+      "status": "pending",
+      "dependencies": ["ERA_VISUALIZATIONS"],
+      "estimated_time_min": 10,
+      "review_items": [
+        "Era page sections render correctly",
+        "Visualizations display data properly",
+        "Interactions and animations work",
+        "Page performance is acceptable"
+      ]
+    },
+    {
+      "step_id": "3D_GRAPH_SETUP",
+      "description": "Three.js scene and basic 3D setup",
+      "status": "pending",
+      "dependencies": ["REVIEW_03"],
+      "estimated_time_min": 60,
+      "sub_steps_to_expand": [
+        "Install Three.js and react-three-fiber",
+        "Create 3D graph page container",
+        "Set up Three.js scene",
+        "Configure camera and controls",
+        "Add orbit controls for navigation",
+        "Set up lighting system",
+        "Create grid helper for orientation",
+        "Add scene resize handling",
+        "Implement zoom controls",
+        "Add reset view button"
+      ]
+    },
+    {
+      "step_id": "3D_GRAPH_NODES",
+      "description": "Node system for task/goal visualization",
+      "status": "pending",
+      "dependencies": ["3D_GRAPH_SETUP"],
+      "estimated_time_min": 120,
+      "sub_steps_to_expand": [
+        "Create base node mesh component",
+        "Implement node positioning algorithm",
+        "Add temporal axis (birth to future)",
+        "Create different node types (activity vs task)",
+        "Add node coloring by category",
+        "Implement node size by importance",
+        "Create node labels with billboarding",
+        "Add node hover effects",
+        "Implement node selection",
+        "Create node detail panel",
+        "Add node clustering for dense areas",
+        "Implement LOD for performance"
+      ]
+    },
+    {
+      "step_id": "3D_GRAPH_EDGES",
+      "description": "Directed edges and connections",
+      "status": "pending",
+      "dependencies": ["3D_GRAPH_NODES"],
+      "estimated_time_min": 90,
+      "sub_steps_to_expand": [
+        "Create edge geometry generator",
+        "Implement curved edge paths",
+        "Add arrow heads for direction",
+        "Create edge coloring by type",
+        "Add edge animation effects",
+        "Implement edge hover highlights",
+        "Create bundled edges for clarity",
+        "Add edge labels",
+        "Implement path highlighting",
+        "Create critical path visualization"
+      ]
+    },
+    {
+      "step_id": "REVIEW_04",
+      "description": "Review 3D graph implementation",
+      "status": "pending",
+      "dependencies": ["3D_GRAPH_EDGES"],
+      "estimated_time_min": 10,
+      "review_items": [
+        "3D scene renders without errors",
+        "Nodes and edges display correctly",
+        "Camera controls work smoothly",
+        "Performance is acceptable with test data"
+      ]
+    },
+    {
+      "step_id": "KNOWLEDGE_GRAPH",
+      "description": "2D knowledge graph with D3.js",
+      "status": "pending",
+      "dependencies": ["REVIEW_04"],
+      "estimated_time_min": 150,
+      "sub_steps_to_expand": [
+        "Install D3.js and dependencies",
+        "Create knowledge graph container",
+        "Set up D3 force simulation",
+        "Create node data structure",
+        "Implement node rendering",
+        "Add node categories (People/Places/Things)",
+        "Create node icons/shapes by type",
+        "Implement edge rendering",
+        "Add force simulation controls",
+        "Create zoom and pan controls",
+        "Build filter panel",
+        "Implement category filtering",
+        "Add search functionality",
+        "Create node clustering algorithm",
+        "Implement expand/collapse for clusters",
+        "Add node detail sidebar",
+        "Create mini-map for navigation",
+        "Add export to image feature"
+      ]
+    },
+    {
+      "step_id": "MODALS_SYSTEM",
+      "description": "Modal dialogs and popups",
+      "status": "pending",
+      "dependencies": ["KNOWLEDGE_GRAPH"],
+      "estimated_time_min": 60,
+      "sub_steps_to_expand": [
+        "Create modal provider/context",
+        "Build base modal component",
+        "Add modal animations",
+        "Create task detail modal",
+        "Build character profile modal",
+        "Add event detail modal",
+        "Create confirmation dialogs",
+        "Implement modal stacking",
+        "Add keyboard navigation",
+        "Create toast notifications"
+      ]
+    },
+    {
+      "step_id": "REVIEW_05",
+      "description": "Review knowledge graph and modals",
+      "status": "pending",
+      "dependencies": ["MODALS_SYSTEM"],
+      "estimated_time_min": 10,
+      "review_items": [
+        "Knowledge graph renders and updates",
+        "Filtering and search work",
+        "Modals open and close properly",
+        "No memory leaks from D3"
+      ]
+    },
+    {
+      "step_id": "INTEGRATION",
+      "description": "Connect all pages and implement cross-page features",
+      "status": "pending",
+      "dependencies": ["REVIEW_05"],
+      "estimated_time_min": 90,
+      "sub_steps_to_expand": [
+        "Implement router navigation between pages",
+        "Create navigation state management",
+        "Add breadcrumb navigation",
+        "Implement deep linking",
+        "Create cross-page task clicking",
+        "Add era navigation from graphs",
+        "Implement highlight synchronization",
+        "Create unified search across pages",
+        "Add keyboard shortcuts system",
+        "Implement undo/redo functionality",
+        "Create settings/preferences page",
+        "Add theme customization"
+      ]
+    },
+    {
+      "step_id": "PERSISTENCE",
+      "description": "Data persistence and SQLite preparation",
+      "status": "pending",
+      "dependencies": ["INTEGRATION"],
+      "estimated_time_min": 90,
+      "sub_steps_to_expand": [
+        "Implement localStorage for settings",
+        "Create session state persistence",
+        "Add offline mode detection",
+        "Create data caching layer",
+        "Install SQLite dependencies",
+        "Create database schema",
+        "Build migration system",
+        "Create data access layer",
+        "Implement sync queue for offline",
+        "Add data export functionality",
+        "Create backup/restore feature",
+        "Implement data validation"
+      ]
+    },
+    {
+      "step_id": "PERFORMANCE",
+      "description": "Performance optimization and polish",
+      "status": "pending",
+      "dependencies": ["PERSISTENCE"],
+      "estimated_time_min": 60,
+      "sub_steps_to_expand": [
+        "Add React.memo to components",
+        "Implement virtual scrolling for lists",
+        "Add lazy loading for graphs",
+        "Optimize bundle size",
+        "Implement code splitting",
+        "Add loading states",
+        "Create skeleton screens",
+        "Add error boundaries",
+        "Implement retry logic",
+        "Add performance monitoring"
+      ]
+    },
+    {
+      "step_id": "TESTING",
+      "description": "Testing and quality assurance",
+      "status": "pending",
+      "dependencies": ["PERFORMANCE"],
+      "estimated_time_min": 120,
+      "sub_steps_to_expand": [
+        "Set up Jest testing framework",
+        "Write unit tests for utilities",
+        "Create component tests",
+        "Add integration tests",
+        "Test Redux actions and reducers",
+        "Test API error handling",
+        "Add E2E tests with Playwright",
+        "Test keyboard navigation",
+        "Test accessibility features",
+        "Performance testing",
+        "Memory leak testing",
+        "Cross-platform testing"
+      ]
+    },
+    {
+      "step_id": "FINAL_REVIEW",
+      "description": "Final review and deployment preparation",
+      "status": "pending",
+      "dependencies": ["TESTING"],
+      "estimated_time_min": 30,
+      "review_items": [
+        "All features working as specified",
+        "No critical bugs or errors",
+        "Performance meets requirements",
+        "Code is clean and documented",
+        "Build process works correctly",
+        "App packages for all platforms"
+      ]
+    }
+  ],
+  "total_estimated_hours": 28,
+  "notes": [
+    "Each major step contains 10-18 sub-steps to be expanded during implementation",
+    "Sub-steps will be broken down into ~10-30 lines of code each",
+    "Review steps included after every 2-3 major implementations",
+    "Testing and performance optimization included as dedicated phases"
+  ]
+}
