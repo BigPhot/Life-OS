@@ -1,0 +1,183 @@
+tasks:
+  - title: "Reinforcement Learning Class Project"
+    description: "Complete the project for my Reinforcement Learning class."
+
+    coreAlignment:
+      percentage: 85
+      type: "Auxillary"
+
+    magnitude:
+      effortComplexity: 9
+      goalImpact: 2
+
+    distribution:
+      power: 0
+      relationships: 0
+      intellect: 5
+      spirituality: 0
+      mobility: 0
+      discovery: 0
+
+    organization:
+      value: 0
+
+    timeframe:
+      dueInDays: 14
+      confidence: "High"
+
+    criteria:
+      completionCriteria: "Project submitted according to class requirements and graded."
+
+  - title: "Data Visualization Class Project"
+    description: "Complete the project for my Data Visualization class."
+
+    coreAlignment:
+      percentage: 85
+      type: "Auxillary"
+
+    magnitude:
+      effortComplexity: 7
+      goalImpact: 2
+
+    distribution:
+      power: 0
+      relationships: 0
+      intellect: 5
+      spirituality: 0
+      mobility: 0
+      discovery: 0
+
+    organization:
+      value: 0
+
+    timeframe:
+      dueInDays: 19
+      confidence: "High"
+
+    criteria:
+      completionCriteria: "Project submitted and visualizations meet assignment criteria."
+
+  - title: "Build Life Goals Graph"
+    description: "Create a structured graph of life goals, events, and dependencies with metrics."
+
+    coreAlignment:
+      percentage: 100
+      type: "Core"
+
+    magnitude:
+      effortComplexity: 6
+      goalImpact: 5
+
+    distribution:
+      power: 0
+      relationships: 0
+      intellect: 5
+      spirituality: 3
+      mobility: 0
+      discovery: 0
+
+    organization:
+      expectedMultiplier:
+        spirituality: 1.4
+        intellect: 1.3
+        discovery: 1.3
+        power: 1.2
+        relationships: 1.1
+        mobility: 1.1
+        discovery: 1.1
+      value: 5
+
+    criteria:
+      completionCriteria: "Graph created with nodes, metrics, and organizational structure suitable for Life OS integration."
+
+  - title: "Add Maintenance/Progress Topic to Framework"
+    description: "Integrate a maintenance and progress tracking topic into my spiritual framework."
+
+    coreAlignment:
+      percentage: 100
+      type: "Core"
+
+    magnitude:
+      effortComplexity: 5
+      goalImpact: 7
+
+    distribution:
+      power: 0
+      relationships: 0
+      intellect: 1
+      spirituality: 5
+      mobility: 0
+      discovery: 0
+
+    organization:
+      expectedMultiplier:
+        spirituality: 1.2
+      value: 1
+
+    criteria:
+      completionCriteria: "Maintenance/progress topic fully integrated and documented within the framework."
+
+  - title: "Have Claude Code Build Visualization Tool"
+    description: "Use Claude Code to create a tool to visualize tasks and progress in the Life Goals graph."
+
+    coreAlignment:
+      percentage: 90
+      type: "Core"
+
+    magnitude:
+      effortComplexity: 7
+      personalImpact: 7
+      externalImpact: 6
+
+    distribution:
+      power: 2
+      relationships: 1
+      intellect: 5
+      spirituality: 0
+      mobility: 1
+      discovery: 4
+
+    organization:
+      expectedMultiplier:
+        intellect: 1.4
+        spirituality: 1.3
+        power: 1.1
+        mobility: 1.1
+        discovery: 1.1
+      value: 4
+
+    criteria:
+      completionCriteria: "Visualization tool functional and able to display task nodes with metrics."
+
+  - title: "Figure Out Maintenance Duties and Document Them"
+    description: "Identify all recurring maintenance and progress tracking duties, and document them clearly for integration into the Life OS framework."
+
+    coreAlignment:
+      percentage: 90
+      type: "Core"
+
+    magnitude:
+      effortComplexity: 6
+      goalImpact: 7
+
+    distribution:
+      power: 0
+      relationships: 0
+      intellect: 0
+      spirituality: 3
+      mobility: 0
+      discovery: 0
+
+    organization:
+      expectedMultiplier:
+        spirituality: 1.3
+        intellect: 1.3
+        discovery: 1.2
+        power: 1.1
+        relationships: 1.1
+        mobility: 1.1
+        discovery: 1.1
+      value: 5
+
+    criteria:
+      completionCriteria: "All maintenance duties listed and documented in a clear, actionable format for future use."
