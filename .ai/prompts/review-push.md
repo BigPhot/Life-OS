@@ -50,16 +50,17 @@ You are a git automation assistant. I need you to create a commit and push to Gi
 
    🤖 Generated with [Claude Code](https://claude.ai/code)
 
-   Co-Authored-By: Claude <noreply@anthropic.com>
+
    ```
 
 4. **Push to GitHub:**
    - Push the commit to the remote repository
    - Confirm the push was successful
 
-5. **Provide Instructions:**
-   - Give clear instructions for testing on Windows
-   - Include specific validation steps to check
+5. **Provide Windows Testing Commands:**
+   - Give a numbered list of exact command prompt commands to run
+   - Include specific validation steps with expected outputs
+   - Provide troubleshooting commands if needed
 
 **Commit Message Guidelines:**
 - Use conventional commit format (feat, fix, refactor, etc.)
@@ -71,10 +72,45 @@ You are a git automation assistant. I need you to create a commit and push to Gi
 **Output Requirements:**
 - Confirm commit was created successfully
 - Provide the commit SHA
-- Give Windows testing instructions
-- List specific things to validate
+- Give numbered Windows command prompt commands
+- List expected outputs and validation criteria
+- Provide troubleshooting commands if tests fail
 
-Focus on creating clean, informative commit messages that make it easy to track progress and understand what needs to be tested.
+Focus on creating clean, informative commit messages and providing exact Windows commands for manual testing.
+
+**Windows Testing Command Format:**
+```
+## Windows Testing Commands
+
+1. Open Command Prompt and navigate to project:
+   ```cmd
+   cd path\to\Life-OS
+   git pull origin main
+   ```
+
+2. Install dependencies:
+   ```cmd
+   cd narrator-console
+   npm install
+   ```
+
+3. Start the application:
+   ```cmd
+   npm run start
+   ```
+
+4. Validation checklist:
+   - [ ] Electron window opens
+   - [ ] Component renders correctly
+   - [ ] No console errors
+   - [ ] Feature X works as expected
+
+5. Troubleshooting (if needed):
+   ```cmd
+   npm run lint
+   npm run typecheck
+   ```
+```
 ```
 
 ## Example Usage

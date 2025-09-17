@@ -2,7 +2,7 @@
   "name": "narrator-console",
   "version": "1.0.0",
   "description": "A desktop application for life tracking and visualization",
-  "main": ".vite/build/main.js",
+  "main": "dist-main/index.js",
   "author": "Life-OS",
   "license": "MIT",
   "engines": {
